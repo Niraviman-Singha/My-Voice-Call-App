@@ -3,18 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/calling"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/myUserIdText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="50dp"
+        android:text="Hi user ID \n Whom do you want to call ?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/targetUserId"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="30dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_boarder"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter an user ID\Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textSize="16sp">
+
+    </EditText>
+
+    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/voiceCallBtn">
+
+    </com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton>
 
 </LinearLayout>
